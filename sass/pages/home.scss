@@ -1,13 +1,18 @@
 .section-topics {
-    background-color: linear-gradient(
+    background-image: linear-gradient(
         to right,
-        rgba($color-primary, 1),
-        rgba($color-primary-dark, 1)
+        $color-primary-light,
+        $color-primary-dark
     );
     padding: 25rem 0 15rem 0;
     margin-top: -10rem;
 }
 
-.section {
-    
+.section-summary {
+    padding: 15rem 0;
+
+    @include respond(tab-port) {
+        padding:10rem 0;
+    }
 }
+ 
