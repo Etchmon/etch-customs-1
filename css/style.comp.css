@@ -1,0 +1,24 @@
+/*
+0 - 600px:      Phone
+600-900px:      Tabllet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800px:  normal styles apply]
+
+1800px + :      Big desktop
+
+$breakpoint argument choices:
+~ phone
+~ tab-port
+~ tab-land
+~ big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+.header {
+  height: 85vh;
+  background-image: linear-gradient(to right bottom, rgba(0, 123, 174, 0.8), rbga(#00577b, 0.8)), url(../../img/diver-deep.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
