@@ -65,7 +65,7 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3rem; }
+  padding: 0; }
   @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
@@ -87,8 +87,9 @@ body {
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
+    margin-left: 4.25rem;
     animation-name: moveInBottom;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-out; }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
@@ -99,13 +100,14 @@ body {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out; }
+    margin-left: 2.10rem;
+    animation: moveInBottom 1.5s ease-out; }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
         letter-spacing: .5rem; } }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 4rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -113,7 +115,8 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: .2rem;
-  transition: all .2s; }
+  transition: all .2s;
+  border-bottom: 2px solid #eee; }
   @media only screen and (max-width: 56.25em) {
     .heading-secondary {
       font-size: 2.5rem; } }
@@ -121,7 +124,6 @@ body {
     .heading-secondary {
       font-size: 2rem; } }
   .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
@@ -187,10 +189,10 @@ body {
   .btn--white::after {
     background-color: #fff; }
 
-.btn--green {
+.btn--blue {
   background-color: #006994;
   color: #fff; }
-  .btn--green::after {
+  .btn--blue::after {
     background-color: #006994; }
 
 .btn::after {
@@ -206,7 +208,7 @@ body {
   transition: all .4s; }
 
 .btn--animated {
-  animation: moveInBottom .5s ease-out .75s;
+  animation: moveInBottom 1.75s ease-out;
   animation-fill-mode: backwards; }
 
 .btn-text:link, .btn-text:visited {
@@ -245,8 +247,63 @@ body {
     backface-visibility: hidden;
     border-radius: .3rem;
     overflow: hidden;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    background-image: linear-gradient(180deg, #eee, #f7f7f7); }
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card__face--front {
+      background-image: linear-gradient(180deg, #eee, #f7f7f7); }
+    .card__face--back {
+      transform: rotateY(180deg); }
+      .card__face--back--1 {
+        background-image: linear-gradient(to right bottom, #eee, #f7f7f7); }
+      .card__face--back--2 {
+        background-image: linear-gradient(to right bottom, #eee, #f7f7f7); }
+      .card__face--back--3 {
+        background-image: linear-gradient(to right bottom, #eee, #f7f7f7); }
+  .card:hover .card__face--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__face--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+    .card__picture--1 {
+      background-image: url(../../img/climate-change.jpg); }
+    .card__picture--2 {
+      background-image: url(../../img/pollution.jpg); }
+    .card__picture--3 {
+      background-image: url(../../img/fishing.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 19rem; }
+  .card__heading--span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading--span--1 {
+      background-image: linear-gradient(to right bottom, rgba(0, 123, 174, 0.85), rgba(0, 87, 123, 0.85)); }
+    .card__heading--span--2 {
+      background-image: linear-gradient(to right bottom, rgba(0, 123, 174, 0.85), rgba(0, 87, 123, 0.85)); }
+    .card__heading--span--3 {
+      background-image: linear-gradient(to right bottom, rgba(0, 123, 174, 0.85), rgba(0, 87, 123, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details p {
+      margin: 0 auto;
+      font-size: 1.5rem;
+      border-bottom: 1px solid #333; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
 
 .warning {
   height: 80vh;
@@ -254,7 +311,61 @@ body {
   background-image: url(../../img/reef.jpg);
   background-size: cover;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  color: #fff; }
+  .warning h3 {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: left; }
+  .warning p {
+    margin: 0 auto;
+    font-size: 1.5rem; }
+
+.data-box {
+  height: 25rem;
+  background-color: #000;
+  opacity: .5;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  transition: all .2s; }
+  .data-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+
+.footer {
+  background-color: #333;
+  padding: 8rem 0;
+  font-size: 1.4rem;
+  color: #f7f7f7; }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 5rem; }
+  .footer__navigation {
+    border-bottom: 1px solid #777;
+    padding-top: 2rem;
+    display: inline-block;
+    width: 100%;
+    text-align: center; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #f7f7f7;
+    background-color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .2s; }
+  .footer__link:hover, .footer__link:active {
+    color: #006994;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(5deg) scale(1.3); }
+  .footer__copyright {
+    margin-top: 5rem;
+    text-align: center; }
 
 .row {
   max-width: 114rem;
@@ -297,7 +408,7 @@ body {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 .header {
-  height: 95vh;
+  height: 100vh;
   background-image: linear-gradient(to right bottom, rgba(0, 123, 174, 0.8), rgba(0, 87, 123, 0.8)), url(../../img/diver-deep.jpg);
   background-size: cover;
   background-position: top;
@@ -316,12 +427,17 @@ body {
     text-align: center; }
 
 .section-topics {
-  background-image: linear-gradient(to right, #007bae, #00577b);
-  padding: 25rem 0 15rem 0;
+  background-image: linear-gradient(180deg, #007bae, #006994);
+  padding: 20rem 0 10rem 0;
   margin-top: -10rem; }
 
 .section-summary {
-  padding: 15rem 0; }
+  padding: 10rem 0;
+  background-color: #006994; }
   @media only screen and (max-width: 56.25em) {
     .section-summary {
       padding: 10rem 0; } }
+
+.section-data {
+  background-image: linear-gradient(180deg, #006994, #00577b);
+  height: 85vh; }
