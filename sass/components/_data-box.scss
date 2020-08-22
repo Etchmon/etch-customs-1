@@ -9,4 +9,8 @@
     &:hover {
         transform: translateY(-1.5rem) scale(1.03);
     }
+
+    @include respond(tab-port) {
+        height: 8rem;
+    }
 }

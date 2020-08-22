@@ -331,6 +331,9 @@ body {
   transition: all .2s; }
   .data-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
+  @media only screen and (max-width: 56.25em) {
+    .data-box {
+      height: 8rem; } }
 
 .footer {
   background-color: #333;
