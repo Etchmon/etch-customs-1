@@ -1,0 +1,11 @@
+.data-box {
+    height: 20rem;
+    background-color: $color-black;
+    opacity: .5;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    border-radius: 5px;
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+}
