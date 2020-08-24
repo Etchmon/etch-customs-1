@@ -268,11 +268,11 @@ body {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .card__picture--1 {
-      background-image: url(./../../img/climate-change.jpg); }
+      background-image: url(./../img/); }
     .card__picture--2 {
-      background-image: url(./../../img/pollution.jpg); }
+      background-image: url(./../img/pollution.jpg); }
     .card__picture--3 {
-      background-image: url(./../../img/fishing.jpg); }
+      background-image: url(./../img/fishing.jpg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -412,7 +412,7 @@ body {
 
 .header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(0, 123, 174, 0.8), rgba(0, 87, 123, 0.8)), url(./../../img/diver-deep.jpg);
+  background-image: linear-gradient(to right bottom, rgba(0, 123, 174, 0.8), rgba(0, 87, 123, 0.8)), url(./../img/diver-deep.jpg);
   background-size: cover;
   background-position: top;
   position: relative; }
